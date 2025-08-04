@@ -9,6 +9,7 @@ import humidity_icon from '../assets/humidity.png';
 import rain_icon from '../assets/rain.png';
 import snow_icon from '../assets/snow.png';
 import wind_icon from '../assets/wind.png';
+import feels_like from '../assets/feels_like.png';
 const Weather = () => {
 
   const inputRef=useRef()
@@ -52,6 +53,7 @@ const Weather = () => {
         windSpeed:data.wind.speed,
         temperature:data.main.temp,
         location:data.name,
+        feels_like:data.main.feels_like,
         icon:icon
       })
 
@@ -86,7 +88,7 @@ const Weather = () => {
             {/* <button className='search-btn'>Search</button> */}
         </div>
         <img src={weatherdata.icon} className='weather-icon'/>
-        <p className='temperature'>{weatherdata.temperature} c</p>
+        <p className='temperature'>{weatherdata.temperature}°c</p>
         <p className='location'>{weatherdata.location}</p>
         <div className='weather-data'>
           <div className='col'>
@@ -101,6 +103,14 @@ const Weather = () => {
             <div>
               <p>{weatherdata.windSpeed} Km/h</p>
               <span>wind Speed</span>
+            </div>
+          </div>
+          {/* added feels like from the Api's */}
+          <div className='col'>
+            <img src={feels_like}/>
+            <div>
+              <p>{weatherdata.feels_like} °C </p>
+              <span>Feels Like</span>
             </div>
           </div>
           {/* <div className='col'>
