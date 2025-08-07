@@ -1,0 +1,28 @@
+.favorites {
+    padding: 2rem;
+    text-align: center;
+}
+
+.favorites__empty {
+    color: #777;
+}
+
+.favorites__title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.favorites__message {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.favorites__list {
+    list-style: none;
+    padding: 0;
+}
+
+.favorites__item {
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
